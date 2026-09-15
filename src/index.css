@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Paper texture background effect */
+  body {
+    background-color: #FDFBF7;
+    color: #1C1917;
+    background-image: radial-gradient(#E8DCCB 0.75px, transparent 0.75px);
+    background-size: 28px 28px;
+  }
+}
+
+/* Custom editorial styles */
+.font-handwriting {
+  font-family: 'Alex Brush', cursive;
+}
+
+/* Poetry stanza styling */
+.poetry-content {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 2.1;
+  letter-spacing: 0.015em;
+  color: #292524;
+}
+
+.poetry-content p {
+  margin-bottom: 1.75rem;
+}
+
+/* Literary pull quote */
+.editorial-quote {
+  position: relative;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.75;
+  color: #574134;
+  border-left: 3px solid #C5A880;
+  padding-left: 1.5rem;
+  margin: 2.25rem 0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5C4AC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BFA88D;
+}

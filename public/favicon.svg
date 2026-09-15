@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#FAF6F0"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#C5A880" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <!-- Open Book Silhouette -->
+  <path d="M32 46C27 43 20 42 14 44V20C20 18 27 19 32 22C37 19 44 18 50 20V44C44 42 37 43 32 46Z" fill="#292524" stroke="#1C1917" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 22V46" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="32" cy="14" r="3" fill="#C5A880"/>
+</svg>
