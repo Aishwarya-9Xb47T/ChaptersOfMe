@@ -2,7 +2,13 @@ import express from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 import { db, initDB } from './db.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -484,6 +490,20 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', app: 'Chapters of Me' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Chapters of Me backend server running on http://localhost:${PORT}`);
+// Serve frontend production build if available
+const distPath = path.join(__dirname, '../dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+
+  // SPA fallback for all non-API GET requests
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Chapters of Me backend server running on http://0.0.0.0:${PORT}`);
 });
