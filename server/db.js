@@ -178,7 +178,7 @@ The truth is, courage doesn't come before you take the leap. Courage is what mee
 ### A Gentle Whispered Truth
 If you have a dream stirring inside you tonight—whether it is to write your story, speak an unspoken truth, switch paths towards what makes your spirit sing, or love someone without reservations—do not silence it.
 
-Do not dismiss your restlessness as a flaw. It is awake because **you are ready**.\`
+Do not dismiss your restlessness as a flaw. It is awake because **you are ready**.`
       }
     ];
 
